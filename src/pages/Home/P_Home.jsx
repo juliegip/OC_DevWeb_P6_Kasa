@@ -1,16 +1,14 @@
-import React from "react";
-import data from '../../logements.json'
+import React from 'react'
+import Banner from '../../components/Banner/Banner'
 
+import image from '../../assets/images/home_banner.png'
 
 function Home() {
-  console.log(data)
   return (
     <div>
-HEllo
-
-
+      <Banner image={image} />
     </div>
-  );
+  )
 }
 
-export default Home;
+export default Home

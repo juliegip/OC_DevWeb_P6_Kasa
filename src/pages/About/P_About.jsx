@@ -1,12 +1,7 @@
-function About() {
+import React from 'react'
 
-  return (
-    <h1>
-About
-
-
-    </h1>
-  );
+const P_About = () => {
+  return <div>A propos</div>
 }
 
-export default About;
+export default P_About
