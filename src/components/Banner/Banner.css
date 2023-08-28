@@ -4,14 +4,11 @@
         display: grid;
         place-content: right;
         text-align: left;
-   padding-top: 30px;
-   padding-bottom: 30px;
-        
-        margin: 0 10px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin: 10px 20px;
         position: relative;
         isolation: isolate;
-
-        
 }
 
 .banner-container::after {
@@ -19,7 +16,7 @@
     position: absolute;
     z-index: -1;
     inset: 0;
-    background: black;
+    background-color: black;
     opacity: var(--bg-image-opacity);
     background-image: var(--bg-image);
     background-size: 140%;
