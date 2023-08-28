@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from '../Card/Card'
 
-const GridCards = () => {
+const Gallery = () => {
   return (
     <section>
       <Card></Card>
@@ -9,4 +9,4 @@ const GridCards = () => {
   )
 }
 
-export default GridCards
+export default Gallery
