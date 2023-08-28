@@ -3,9 +3,9 @@ import Card from '../Card/Card'
 
 const GridCards = () => {
   return (
-    <div>
+    <section>
       <Card></Card>
-    </div>
+    </section>
   )
 }
 

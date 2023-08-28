@@ -1,10 +1,10 @@
 import React from 'react'
+import './Banner.css'
 
 const Banner = ({ image, title }) => {
   return (
-    <div>
-      <img src={image} alt="kasa-banner" className="" />
-      <h2 className="">{title}</h2>
+    <div className="banner-container">
+      <h1 className="banner-title">{title}</h1>
     </div>
   )
 }

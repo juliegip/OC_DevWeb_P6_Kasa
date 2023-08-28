@@ -1,22 +1,17 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
+import Footer from '../components/Footer/Footer'
+import Header from '../components/Header/Header'
 
 const RootLayout = () => {
   return (
     <div className="root-layout">
-      <header>
-        <nav>
-          <NavLink to="/">Accueil</NavLink>
-          <NavLink to="/about">A propos de</NavLink>
-        </nav>
-      </header>
+      <Header />
 
       <main>
         <Outlet />
       </main>
 
-      <footer>
-        <h1>Kasa</h1>
-      </footer>
+      <Footer />
     </div>
   )
 }

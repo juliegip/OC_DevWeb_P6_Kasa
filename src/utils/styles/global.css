@@ -1,0 +1,11 @@
+:root {
+    --primary-font: 'Montserrat', sans-serif;
+  }
+  
+  *{
+    box-sizing: border-box;
+  }
+  body {
+    font-family: var(--primary-font);
+
+  }
