@@ -1,9 +1,9 @@
 import React from 'react'
 import './P_Home.css'
 import Banner from '../../components/Banner/Banner'
-import { texts } from '../../utils/apptexts/texts'
+import { texts } from '../../data/apptexts/texts'
 import image from '../../assets/images/home_banner.png'
-import Gallery from '../../components/Gallery/GridCards'
+import Gallery from './Gallery/Gallery'
 
 function Home() {
   return (

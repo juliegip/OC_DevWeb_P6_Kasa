@@ -1,0 +1,23 @@
+@import '../../styles/variables/variables.scss';
+
+header {
+    margin: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+img {
+    width: 145px;
+}
+
+a {
+    text-decoration: none;
+    color: $primary-color;
+    margin: 0 8px;
+    text-transform: uppercase;
+}
+
+.header-menu a.active {
+    text-decoration: underline;
+}

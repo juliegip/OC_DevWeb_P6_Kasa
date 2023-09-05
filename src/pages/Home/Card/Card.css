@@ -1,0 +1,9 @@
+.card-wrapper {
+  background: linear-gradient(#FF6060, #232121);
+  padding: 100px 20px 10px 20px;
+  border-radius: 15px;
+}
+
+.card-title {
+  color: white;
+}/*# sourceMappingURL=Card.css.map */

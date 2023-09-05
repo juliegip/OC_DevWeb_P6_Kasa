@@ -1,0 +1,1 @@
+{"version":3,"sources":["Footer.scss","Footer.css"],"names":[],"mappings":"AAAA;EACI,uBAAA;EACA,YAAA;EACA,gBAAA;ACCJ","file":"Footer.css","sourcesContent":["footer {\r\n    background-color: black;\r\n    color: white;\r\n    margin-top: 30px;\r\n\r\n}","footer {\n  background-color: black;\n  color: white;\n  margin-top: 30px;\n}"]}

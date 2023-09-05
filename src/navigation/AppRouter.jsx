@@ -6,10 +6,10 @@ import {
   RouterProvider,
 } from 'react-router-dom'
 
-import RootLayout from '../layout/RootLayout'
+import RootLayout from './RootLayout'
 import Home from '../pages/Home/P_Home'
 import About from '../pages/About/P_About'
-import Error from '../components/Error/Error'
+import Error from '../pages/Error/Error'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
