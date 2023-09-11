@@ -1,13 +1,13 @@
 import React from 'react'
-import './P_Home.css'
 import Banner from '../../components/Banner/Banner'
 import { texts } from '../../data/apptexts/texts'
 import image from '../../assets/images/about_banner.png'
-import Gallery from './Gallery/Gallery'
+import Gallery from '../../components/Gallery/Gallery'
+import styles from './Home.module.css'
 
 function Home() {
   return (
-    <section className="homepage">
+    <section className={styles.homepage}>
       <Banner image={image} title={texts.main_title} />
       <Gallery />
     </section>

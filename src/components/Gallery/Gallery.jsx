@@ -1,11 +1,11 @@
 import React from 'react'
-import './Gallery.css'
+import styles from './Gallery.module.scss'
 import Card from '../Card/Card'
 // import useFetch from '../../../hooks/getData'
-import LocationsDatas from '../../../data/logements.json'
+import LocationsDatas from '../../data/logements.json'
 
 function Gallery(props) {
-  // const { data, isLoading, error } = useFetch('../../../data/logements.json')
+  // const { data, loading, error } = useFetch('../../../data/logements.json')
 
   // const cardlist = data?.cardlist
 
@@ -14,8 +14,8 @@ function Gallery(props) {
   // }
 
   return (
-    <section className="main-gallery">
-      {/* {isLoading ? (
+    <section className={styles.mainGallery}>
+      {/* {loading ? (
         <span>Loader </span>
       ) : (
         <div> */}

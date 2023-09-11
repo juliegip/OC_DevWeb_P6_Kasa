@@ -1,10 +1,10 @@
 import React from 'react'
 import { texts } from '../../data/apptexts/texts'
-import './Dropdown.css'
+import styles from './Dropdown.module.scss'
 
 function Dropdown(props) {
   return (
-    <div className="dropdown-container">
+    <div className={styles.dropdowContainer}>
       <span>{texts.fiabilite}</span>
     </div>
   )

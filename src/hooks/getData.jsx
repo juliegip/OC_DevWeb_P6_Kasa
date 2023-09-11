@@ -1,32 +1,31 @@
 import { useState, useEffect } from 'react'
 
 function useFetch(url) {
-  const [data, setData] = useState([])
-  const [isLoading, setLoading] = useState(true)
-  const [error, setError] = useState(false)
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
-    if (!url) return
-    setLoading(true)
     async function fetchData() {
       try {
         const response = await fetch(url)
+        if (!response.ok) {
+          throw new Error(`Erreur réseau avec le statut: ${response.status}`)
+        }
 
-        const data = await response.json()
-        console.log(data)
-        setData(data)
-      } catch (err) {
-        console.log(err)
-        setError(true)
+        const jsonData = await response.json()
+        setData(jsonData)
+      } catch (error) {
+        setError(error)
       } finally {
         setLoading(false)
       }
     }
+
     fetchData()
   }, [url])
 
-  console.log('data is', data)
-  return { isLoading, data, error }
+  return { data, loading, error }
 }
 
 export default useFetch
