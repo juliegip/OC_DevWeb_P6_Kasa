@@ -1,1 +1,0 @@
-{"version":3,"sources":["Gallery.scss","Gallery.css"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,sBAAA;ACCJ","file":"Gallery.css","sourcesContent":[".main-gallery {\r\n    display: flex;\r\n    flex-direction: column;\r\n}",".main-gallery {\n  display: flex;\n  flex-direction: column;\n}"]}

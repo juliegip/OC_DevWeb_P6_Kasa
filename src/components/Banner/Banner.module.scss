@@ -1,5 +1,5 @@
 
-.banner-container {
+.bannerContainer {
     --bg-image: url('../../assets/images/home_banner.png');
     --bg-image-opacity: 0.9;
     display: grid;
@@ -7,10 +7,11 @@
     text-align: left;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin: 10px 20px;
-    position: relative;
+     position: relative;
     isolation: isolate;
-    width: 90%;
+    width: 98%;
+    margin: 10px 40px;
+    max-width: 1440px;
   
     &::after {
       content: '';
@@ -31,12 +32,16 @@
         color: white;
         padding: 5px 120px 5px 30px;
         line-height: 24px;
+        @media screen and (min-width: 768px) {
+          font-size: 48px;
+        }
     }
+    
+@media screen and (min-width: 768px) {
+  text-align: center;
+  
+}
+
 } 
 
 
-
-@media screen and (min-width: 768px) {
-
-  }
-  

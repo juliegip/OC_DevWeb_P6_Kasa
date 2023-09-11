@@ -5,6 +5,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1440px;
 }
 
 img {
@@ -18,6 +19,6 @@ a {
     text-transform: uppercase;
 }
 
-.header-menu a.active {
+.headerMenu a.active {
     text-decoration: underline;
 }

@@ -1,12 +1,12 @@
 import React from 'react'
-import './Banner.css'
+import styles from './Banner.module.scss'
 import '../../styles/variables/variables.scss'
 
 function Banner({ title }) {
   let backgroundImageUrl = ''
 
-  const currentRoute = window.location.pathname
-  if (currentRoute === 'http://localhost:3000/about') {
+  // const currentRoute = window.location.pathname
+  if (true) {
     backgroundImageUrl = 'url("../../assets/images/about_banner.png")'
   } else {
     backgroundImageUrl = "url('../../assets/images/home_banner.png')"
@@ -17,7 +17,7 @@ function Banner({ title }) {
     '--bg-image-opacity': 0.9,
   }
   return (
-    <div className="banner-container" style={bannerStyle}>
+    <div className={styles.bannerContainer} style={bannerStyle}>
       <h1>{title}</h1>
     </div>
   )
