@@ -1,7 +1,9 @@
 .card-wrapper {
-  background: linear-gradient(#FF6060, #232121);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-color: #FF6060;
   padding: 100px 20px 10px 20px;
   border-radius: 15px;
+  margin: 5px;
 }
 
 .card-title {

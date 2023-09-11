@@ -2,10 +2,12 @@
 
 
 .card-wrapper {
-    background: linear-gradient(  $primary-color, #232121  );
-  
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background-color: $primary-color;
     padding: 100px 20px 10px 20px;
     border-radius: 15px;
+    margin: 5px;
+    
 }
 
 .card-title {

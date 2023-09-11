@@ -1,6 +1,6 @@
 .banner-container {
   --bg-image: url("../../assets/images/home_banner.png");
-  --bg-image-opacity:0.9;
+  --bg-image-opacity: 0.9;
   display: grid;
   place-content: right;
   text-align: left;
@@ -9,8 +9,8 @@
   margin: 10px 20px;
   position: relative;
   isolation: isolate;
+  width: 90%;
 }
-
 .banner-container::after {
   content: "";
   position: absolute;
@@ -23,12 +23,11 @@
   background-position: center right;
   border-radius: 10px;
 }
-
-.banner-title {
+.banner-container h1 {
   font-family: "Montserrat";
   font-size: 24px;
   font-weight: 500;
   color: white;
-  padding: 5px 150px 5px 30px;
+  padding: 5px 120px 5px 30px;
   line-height: 24px;
 }/*# sourceMappingURL=Banner.css.map */
