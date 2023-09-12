@@ -1,5 +1,5 @@
 import React from 'react'
-import { texts } from '../../data/apptexts/texts'
+import texts from '../../data/app_texts'
 import styles from './Dropdown.module.scss'
 
 function Dropdown(props) {

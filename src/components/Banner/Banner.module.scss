@@ -1,6 +1,7 @@
+@import '../../styles/_variables.scss';
 
 .bannerContainer {
-    --bg-image: url('../../assets/images/home_banner.png');
+    // --bg-image: url('../../assets/images/home_banner.png');
     --bg-image-opacity: 0.9;
     display: grid;
     place-content: right;
@@ -18,9 +19,9 @@
       position: absolute;
       z-index: -1;
       inset: 0;
-      background-color: black;
+      background-color: transparent;
       opacity: var(--bg-image-opacity);
-      background-image: var(--bg-image);
+      // background-image: var(--bg-image);
       background-size: 140%;
       background-position: center right;
       border-radius: 10px;

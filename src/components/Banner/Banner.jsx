@@ -1,23 +1,13 @@
 import React from 'react'
 import styles from './Banner.module.scss'
-import '../../styles/variables/variables.scss'
+// import background from '../../assets/images/home_banner.png'
 
-function Banner({ title }) {
-  let backgroundImageUrl = ''
-
-  // const currentRoute = window.location.pathname
-  if (true) {
-    backgroundImageUrl = 'url("../../assets/images/about_banner.png")'
-  } else {
-    backgroundImageUrl = "url('../../assets/images/home_banner.png')"
-  }
-
-  const bannerStyle = {
-    '--bg-image': backgroundImageUrl,
-    '--bg-image-opacity': 0.9,
-  }
+function Banner({ title, image }) {
   return (
-    <div className={styles.bannerContainer} style={bannerStyle}>
+    <div
+      className={styles.bannerContainer}
+      style={{ backgroundImage: `url(${image})` }}
+    >
       <h1>{title}</h1>
     </div>
   )

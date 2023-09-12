@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# css generated files
+/public/css
+
+# fichier de notes
+ZNotes.md
