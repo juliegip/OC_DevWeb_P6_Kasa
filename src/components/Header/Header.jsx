@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header>
       <img src={logo} alt="Kasa" />
-      <nav className={styles.headerMenu}>
+      <nav className={styles.links}>
         <NavLink to="/">Accueil</NavLink>
         <NavLink to="/about">A propos</NavLink>
       </nav>

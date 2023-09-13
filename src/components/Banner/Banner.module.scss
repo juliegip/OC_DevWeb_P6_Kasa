@@ -1,44 +1,44 @@
 @import '../../styles/_variables.scss';
 
 .bannerContainer {
-    // --bg-image: url('../../assets/images/home_banner.png');
-    --bg-image-opacity: 0.9;
-    display: grid;
-    place-content: right;
+    display: flex;
+    align-items: center;
+   
+   
+    // position: relative;
+    // isolation: isolate;
     text-align: left;
-    padding-top: 20px;
-    padding-bottom: 20px;
-     position: relative;
-    isolation: isolate;
-    width: 98%;
-    margin: 10px 40px;
-    max-width: 1440px;
-  
-    &::after {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      inset: 0;
-      background-color: transparent;
-      opacity: var(--bg-image-opacity);
-      // background-image: var(--bg-image);
-      background-size: 140%;
-      background-position: center right;
-      border-radius: 10px;
-    }
+    background-color: black;
+    border-radius: 10px;
+    max-width: 768px;
+    min-height: 120px;
+    margin: 10px;
+    width: calc(100% - 30px);
+    
+    // &::after {
+    //   content: "8
+//   position: absolute;
+    //   z-index: -1;
+
+     
+    // }
+    
     h1 {
+     
         font-family: 'Montserrat';
         font-size: 24px;
         font-weight: 500;
         color: white;
-        padding: 5px 120px 5px 30px;
-        line-height: 24px;
+        padding-left: 30px;
+        
+       
         @media screen and (min-width: 768px) {
           font-size: 48px;
         }
     }
     
 @media screen and (min-width: 768px) {
+  max-width: 1440px;
   text-align: center;
   
 }
