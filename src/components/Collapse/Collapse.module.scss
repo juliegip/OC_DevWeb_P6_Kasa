@@ -1,6 +1,48 @@
 @import '../../styles/_variables.scss';
-.dropdownContainer {
+
+.collapseContainer {
+    display: flex;
+    flex-direction: column;
     background-color: $primary-color;
     color: white;
-  
+    max-width: 768px;
+    margin: 5px 0;
+    width: 100%;
+    border-radius: 5px;
+
+    .hidden {
+        display: none;
+    }
+    
+    .collapseTopbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 12px 10px 10px;
+
+        & button {
+            color: white;
+            border: none;
+            background-color: $primary-color;
+        }
+    }
+
+    .collapseText{
+        background-color:$secondary-color;
+        color: $primary-color;
+        width: 100%;
+        padding: 10px 8px;
+        overflow: hidden;
+        height: 0;
+        transition: height 1000ms ease-in-out;
+
+        &.opened {
+            height: auto;
+        }
+
+    }
+
+    @media screen and (min-width: 768px) {
+        margin: 10px;
+    }
 }
+

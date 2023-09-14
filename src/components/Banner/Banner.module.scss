@@ -3,43 +3,31 @@
 .bannerContainer {
     display: flex;
     align-items: center;
-   
-   
-    // position: relative;
-    // isolation: isolate;
-    text-align: left;
     background-color: black;
     border-radius: 10px;
     max-width: 768px;
     min-height: 120px;
-    margin: 10px;
-    width: calc(100% - 30px);
-    
-    // &::after {
-    //   content: "8
-//   position: absolute;
-    //   z-index: -1;
+    margin: 10px 10px 15px 10px;
+    width: 100%;
 
-     
-    // }
-    
     h1 {
-     
-        font-family: 'Montserrat';
         font-size: 24px;
         font-weight: 500;
         color: white;
         padding-left: 30px;
-        
-       
         @media screen and (min-width: 768px) {
           font-size: 48px;
         }
     }
     
 @media screen and (min-width: 768px) {
+  justify-content: center;
   max-width: 1440px;
-  text-align: center;
+  border-radius: 25px;
+  min-height: 220px;
+  width: calc(100% - 50px);
+  margin: 0px;
+ 
   
 }
 
