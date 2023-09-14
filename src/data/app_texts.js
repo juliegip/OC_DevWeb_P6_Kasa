@@ -1,6 +1,7 @@
 const texts = {
   main_title: 'Chez vous, partout et ailleurs',
-  error_404: "Oops, la page que vous demandez n'existe pas",
+  error_404: "Oups, la page que vous demandez n'existe pas",
+  back_homepage: "Retourner sur la page d'accueil",
   fiabilite: 'Fiabilité',
   fiabilite_descr:
     'Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.',
