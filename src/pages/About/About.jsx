@@ -7,13 +7,16 @@ import texts from '../../data/app_texts'
 import imageabout from '../../assets/images/about_banner.png'
 import Collapse from '../../components/Collapse/Collapse'
 
-const P_About = () => {
+function About() {
   return (
     <section className={styles.aboutpage}>
       <Banner image={imageabout}></Banner>
-      <Collapse title={texts.fiabilite} />
+      <Collapse title={texts.fiabilite} descr={texts.fiabilite_descr} />
+      <Collapse title={texts.respect} descr={texts.respect_descr} />
+      <Collapse title={texts.service} descr={texts.security_descr} />
+      <Collapse title={texts.security} descr={texts.security_descr} />
     </section>
   )
 }
 
-export default P_About
+export default About
