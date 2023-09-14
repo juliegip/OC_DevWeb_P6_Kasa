@@ -1,8 +1,7 @@
 import React from 'react'
-import texts from '../../data/app_texts'
-import styles from './Dropdown.module.scss'
+import styles from './Collapse.module.scss'
 
-function Dropdown(title) {
+function Collapse({ title }) {
   return (
     <div className={styles.dropdowContainer}>
       <span>{title}</span>
@@ -10,4 +9,4 @@ function Dropdown(title) {
   )
 }
 
-export default Dropdown
+export default Collapse
