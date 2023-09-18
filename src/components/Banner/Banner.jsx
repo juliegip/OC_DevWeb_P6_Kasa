@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Banner.module.scss'
 // import background from '../../assets/images/home_banner.png'
+import background from '../../assets/images/home_banner.png'
 
 function Banner({ title, image }) {
   const bannerStyle = {
@@ -12,6 +13,7 @@ function Banner({ title, image }) {
 
   return (
     <div style={bannerStyle} className={styles.bannerContainer}>
+      <img src={background} alt="" />
       <h1>{title}</h1>
     </div>
   )

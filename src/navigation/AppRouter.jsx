@@ -10,12 +10,14 @@ import RootLayout from './RootLayout'
 import Home from '../pages/Home/Home'
 import About from '../pages/About/About'
 import Error from '../pages/Error/Error'
+import Accomodation from '../pages/Accomodations/Accomodation'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
       <Route path="/about" element={<About />} />
+      <Route path="/accomodation/:id" element={<Accomodation />} />
       <Route path="*" element={<Error />} />
     </Route>
   )

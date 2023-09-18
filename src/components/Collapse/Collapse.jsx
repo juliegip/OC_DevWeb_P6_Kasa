@@ -26,12 +26,11 @@ function Collapse({ title, descr }) {
           />
         </button>
       </div>
-
-      {open && (
+      <div className={styles.wrapper}>
         <div className={`${styles.collapseText} ${open ? styles.opened : ''}`}>
           {descr}
         </div>
-      )}
+      </div>
     </article>
   )
 }

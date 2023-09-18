@@ -1,8 +1,13 @@
-import React from 'react'
 import styles from './Footer.module.scss'
+import logo from '../../assets/images/LOGO-footer.png'
 
-const Footer = () => {
-  return <footer className={styles.footer}>Kasa</footer>
+function Footer() {
+  return (
+    <footer className={styles.footer}>
+      <img src={logo} alt="" />
+      <p>&copy; 2020 Kasa. All rights reserved </p>
+    </footer>
+  )
 }
 
 export default Footer

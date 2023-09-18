@@ -3,12 +3,12 @@
 .collapseContainer {
     display: flex;
     flex-direction: column;
-    background-color: $primary-color;
+    background-color:$secondary-color;
     color: white;
     max-width: 768px;
     margin: 5px 0;
     width: 100%;
-    border-radius: 5px;
+ 
 
     .hidden {
         display: none;
@@ -18,6 +18,8 @@
         display: flex;
         justify-content: space-between;
         padding: 10px 12px 10px 10px;
+        border-radius: 5px;
+        background-color: $primary-color;
 
         & button {
             color: white;
@@ -28,19 +30,21 @@
 
     .collapseText{
         background-color:$secondary-color;
-        color: $primary-color;
+        color: $secondary-color;
+        border-radius: 5px;
         width: 100%;
-        padding: 10px 8px;
         overflow: hidden;
         height: 0;
-        transition: height 1000ms ease-in-out;
-
+        transition:height 500ms ease-in;
+  
         &.opened {
-            height: auto;
-        }
-
+            height: 100px;
+            transition: height 800ms ease-out;
+            padding: 10px 8px;
+            color: $primary-color;
+            }
+        
     }
-
     @media screen and (min-width: 768px) {
         margin: 10px;
     }
