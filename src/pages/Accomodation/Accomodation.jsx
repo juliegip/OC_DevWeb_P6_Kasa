@@ -6,13 +6,13 @@ import Collapse from '../../components/Collapse/Collapse'
 import Tag from '../../components/Tag/Tag'
 import RateStars from '../../components/RateStars/RateStars'
 import Host from '../../components/Host/Host'
-import data from '../../data/listofaccomodations'
+import accommodations from '../../data/listofaccomodations'
 import texts from '../../data/app_texts'
 
 function Accomodation(props) {
   let { id } = useParams()
 
-  const accomodationData = data.find((product) => product.id === id)
+  const accomodationData = accommodations.find((product) => product.id === id)
   if (!accomodationData) return ''
 
   return (

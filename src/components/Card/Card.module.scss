@@ -1,66 +1,63 @@
 @import '../../styles/_variables.scss';
-
+@import '../../styles/mixin.scss';
+    
+.link {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
 
 .cardWrapper {
     display: flex;
-    align-items: flex-end;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-    background-color: $primary-color;
-    padding-top: 100px;
+    flex-direction: column;
+    justify-items: center;
     border-radius: 10px;
-    min-height: 255px;
-    margin: 10px 0;
-    width: 100%;
-    --card-width: calc(32% - 20px);
-   
-
-    @media screen and (min-width: 768px) {
-        min-height: auto;
-        flex: 0 1 var(--card-width);
-        max-width: var(--card-width);
-        max-height: 340px;
-        padding-top: 0;
-        aspect-ratio: 1;
-        font-size: calc(var(--card-width)*0.3);
-
-
-    }
-
-a {
-    text-decoration: none;
-
-    .imgWrapper{
-        position: relative;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition : box-shadow 0.2s ease-in-out;
+ 
+    
+    &::after{
+        content: '';
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        background-color: aqua;
-        top: 0;
-    
-        .img {
-            position: absolute;
-    
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        
-            
-            }
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.5) 100%);
     }
 
-    .cardCaption {
-        color: white;
+    .cardImg {
         width: 100%;
-        overflow: hidden;
-        padding-left: 10px;
-        padding-right: 10px;
+    height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px 10px 0 0 ;
 
-        @media screen and (min-width: 768px) {
-        font-size: 1.1rem;
-        left: 0;
-        right: 0;
+    }
+    
+    .cardCaption {
+        position:absolute;
+        z-index: 20;
+        bottom: 5px;
+        left: 10px;
+        text-align: left;
 
-        }
+    }
+
+    &:hover {
+        box-shadow: 0 2px 8px rgb(0, 0, 0);
+        transform: scale(1.05);
+    }
+
+    @media screen and (min-width: 768px){
+        min-height: auto;
+        max-height: 340px;
+        aspect-ratio: 1;
+
     }
 
 }
-}
+

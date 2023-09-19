@@ -1,9 +1,6 @@
 $primary-color: #ff6060;
 $secondary-color: #F6F6F6;
-$home-bg-image: url('../../assets/images/home_banner.png');
-$about-bg-image: url('../../assets/images/about_banner.png');
+$home-bg-image: url('../assets/images/home_banner.png');
+$about-bg-image: url('../assets/images/about_banner.png');
 
-@mixin set-bg-image($bg-image) {
-    --bg-image: #{$bg-image};
-    --bg-image-opacity: 0.9;
-}
+ 

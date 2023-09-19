@@ -10,7 +10,7 @@ import RootLayout from './RootLayout'
 import Home from '../pages/Home/Home'
 import About from '../pages/About/About'
 import Error from '../pages/Error/Error'
-import Accomodation from '../pages/Accomodations/Accomodation'
+import Accomodation from '../pages/Accomodation/Accomodation'
 
 const router = createBrowserRouter(
   createRoutesFromElements(

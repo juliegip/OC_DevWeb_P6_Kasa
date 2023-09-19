@@ -1,20 +1,10 @@
-import React from 'react'
 import styles from './Banner.module.scss'
-// import background from '../../assets/images/home_banner.png'
-import background from '../../assets/images/home_banner.png'
 
-function Banner({ title, image }) {
-  const bannerStyle = {
-    backgroundImage: `url(${image})`,
-    backgroundPosition: 'right',
-    backgroundSize: '140%',
-    opacity: '0.8',
-  }
-
+function Banner({ title, imgURL }) {
   return (
-    <div style={bannerStyle} className={styles.bannerContainer}>
-      <img src={background} alt="" />
-      <h1>{title}</h1>
+    <div className={styles.bannerContainer}>
+      <h1 className={styles.bannerTitle}>{title}</h1>
+      <img src={imgURL} alt="Kasa banner" className={styles.bannerImg} />
     </div>
   )
 }

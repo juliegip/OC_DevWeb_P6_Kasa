@@ -6,8 +6,10 @@ function Error() {
   return (
     <div className={styles.errorpage}>
       <span className={styles.error}>404</span>
-      <p>{texts.error_404}</p>
-      <Link to="/">{texts.back_homepage}</Link>
+      <p className={styles.textError}>{texts.error_404}</p>
+      <Link to="/" className={styles.link}>
+        {texts.back_homepage}
+      </Link>
     </div>
   )
 }

@@ -1,0 +1,18 @@
+@mixin banner-bg {
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin banner-size {
+    border-radius: 10px;
+    min-height: 120px;
+    width: 100%;
+    max-width: 768px;
+    margin: 10px 10px 15px 10px;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
