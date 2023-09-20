@@ -8,7 +8,7 @@ import {
 
 function Slider({ pictures }) {
   const [current, setCurrent] = useState(0)
-  const length = pictures.length
+  let length = pictures.length
 
   const goToPrevious = () => {
     setCurrent(current === 0 ? length - 1 : current - 1)
@@ -42,18 +42,24 @@ function Slider({ pictures }) {
             </div>
           )
         })}
-
-      <FontAwesomeIcon
-        icon={faChevronLeft}
-        onClick={goToPrevious}
-        className={`${styles.chevron} ${styles.left}`}
-      />
-      <FontAwesomeIcon
-        icon={faChevronRight}
-        onClick={goToNext}
-        className={`${styles.chevron} ${styles.right}`}
-      />
-      <img src={pictures} alt="" />
+      <div className={`${length === 1 ? styles.hidden : styles.arrows}`}>
+        <FontAwesomeIcon
+          icon={faChevronLeft}
+          onClick={goToPrevious}
+          className={styles.arrow}
+        />
+        <FontAwesomeIcon
+          icon={faChevronRight}
+          onClick={goToNext}
+          className={`${styles.arrow}
+          }`}
+        />
+      </div>
+      <div className={styles.numbering}>
+        <span>
+          {current + 1} / {length}
+        </span>
+      </div>
     </div>
   )
 }

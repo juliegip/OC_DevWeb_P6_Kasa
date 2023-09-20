@@ -3,17 +3,19 @@
 .container {
     display: flex;
     align-items: center;
+    padding: 5px;
 
     .star {
         width: 15px;
         height: 15px;
 
-        // .full {
-        //     color:$primary-color
-        // }
+       
+    }
+    .full {
+        color:$primary-color
+    }
 
-        .grey {
-            color: gainsboro;
-        }
+    .grey {
+        color: gainsboro;
     }
 }

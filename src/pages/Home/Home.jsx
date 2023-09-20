@@ -1,4 +1,3 @@
-import React from 'react'
 import Banner from '../../components/Banner/Banner'
 import texts from '../../data/app_texts'
 import data from '../../data/listofaccomodations'

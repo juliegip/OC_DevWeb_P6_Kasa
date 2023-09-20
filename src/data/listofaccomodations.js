@@ -1,4 +1,4 @@
-const accommodations = [
+const properties = [
   {
     id: 'c67ab8a7',
     title: 'Appartement cosy',
@@ -580,4 +580,4 @@ const accommodations = [
   },
 ]
 
-export default accommodations
+export default properties

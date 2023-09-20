@@ -4,12 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 function RateStars({ rating }) {
-  console.log(rating)
-  const rate = [1, 2, 3, 4, 5]
+  const stars = [1, 2, 3, 4, 5]
   return (
     <div className={styles.container}>
-      {rate &&
-        rate.map((item, index) =>
+      {stars &&
+        stars.map((item, index) =>
           rating >= item ? (
             <FontAwesomeIcon
               icon={faStar}

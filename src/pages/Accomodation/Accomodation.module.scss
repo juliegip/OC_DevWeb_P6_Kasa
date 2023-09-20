@@ -6,12 +6,15 @@
   margin: 0 20px;
   color: $primary-color;
 
+  
   .title{
     font-size: 18px;
-    margin-bottom: 8px;
+    font-weight: 500;
+    margin-bottom: 5px;
   }
-  .location {
+  .subtitle {
     margin-top: 0;
+    font-weight: 500;
     font-size: 14px;
   }
 }
@@ -19,4 +22,8 @@
 .containerHR {
   display: flex;
   justify-content: space-between;
+  margin: 10px 0;
+
+
+
 }
