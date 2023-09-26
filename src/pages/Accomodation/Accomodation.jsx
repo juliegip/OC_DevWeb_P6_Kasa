@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import styles from './Accomodation.module.scss'
 import Slider from '../../components/Slider/Slider'
-import Collapse from '../../components/Collapse/Collapse'
+import Dropdown from '../../components/Dropdown/Dropdown'
 import Tag from '../../components/Tag/Tag'
 import RateStars from '../../components/RateStars/RateStars'
 import Host from '../../components/Host/Host'
@@ -16,24 +16,33 @@ function Accomodation(props) {
 
   return (
     <div className={styles.container}>
-      <div>
-        <Slider pictures={listofproperties.pictures} />
-        <p className={styles.title}>{listofproperties.title}</p>
-        <p className={styles.subtitle}>{listofproperties.location}</p>
-        <Tag tags={listofproperties.tags}></Tag>
+      <Slider pictures={listofproperties.pictures} />
+      <div className={styles.wrapperDetails}>
+        <div className={styles.wrapperTitlesTags}>
+          <p className={styles.title}>{listofproperties.title}</p>
+          <p className={styles.subtitle}>{listofproperties.location}</p>
+          <Tag tags={listofproperties.tags}></Tag>
+        </div>
+        <div></div>
+        <div className={styles.wrapperHostRates}>
+          <RateStars rating={listofproperties.rating} />
+          <Host
+            name={listofproperties.host.name}
+            profilepic={listofproperties.host.picture}
+          />
+        </div>
       </div>
-      <div className={styles.containerHR}>
-        <RateStars rating={listofproperties.rating} />
-        <Host
-          name={listofproperties.host.name}
-          profilepic={listofproperties.host.picture}
+      <div className={styles.collapses}>
+        <Dropdown
+          title={texts.description}
+          descr={listofproperties.description}
+        />
+
+        <Dropdown
+          title={texts.equipements}
+          descr={listofproperties.equipments}
         />
       </div>
-      <Collapse
-        title={texts.description}
-        descr={listofproperties.description}
-      />
-      <Collapse title={texts.equipements} descr={listofproperties.equipments} />
     </div>
   )
 }

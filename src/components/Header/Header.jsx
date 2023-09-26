@@ -4,7 +4,7 @@ import styles from './Header.module.scss'
 
 function Header() {
   return (
-    <header>
+    <header className={styles.header}>
       <img src={logo} alt="Kasa" />
       <nav className={styles.links}>
         <NavLink to="/">Accueil</NavLink>

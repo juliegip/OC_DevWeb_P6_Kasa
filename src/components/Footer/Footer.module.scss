@@ -1,18 +1,23 @@
 @import '../../styles/_variables.scss';
 @import '../../styles/_mixin.scss';
 
+.footer {
+  background-color: black;
+  color: white;
+  height: 210px;
+  margin-top: 15px;
+  align-items: center;
+  width: 100%;
+  @include flex-column;
 
-footer {
-    background-color: black;
-    color: white;
-    height: 210px;
-    margin-top:  15px;
-    align-items: center;    
-    @include flex-column;
+  .text {
+    font-size: 0.7em;
+    text-align: center;
+    margin: 28px 0 0 0;
+    padding-bottom: 0;
+  }
 
-    p {
-        font-size: 0.7em;
-        text-align: center;
-        padding: 0 100px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 1.5em;
+  }
 }

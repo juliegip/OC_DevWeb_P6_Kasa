@@ -1,5 +1,5 @@
 import Banner from '../../components/Banner/Banner'
-import Collapse from '../../components/Collapse/Collapse'
+import Dropdown from '../../components/Dropdown/Dropdown'
 
 import styles from './About.module.css'
 import texts from '../../data/app_texts'
@@ -9,10 +9,10 @@ function About() {
   return (
     <section className={styles.aboutpage}>
       <Banner imgURL={bg}></Banner>
-      <Collapse title={texts.fiabilite} descr={texts.fiabilite_descr} />
-      <Collapse title={texts.respect} descr={texts.respect_descr} />
-      <Collapse title={texts.service} descr={texts.security_descr} />
-      <Collapse title={texts.security} descr={texts.security_descr} />
+      <Dropdown title={texts.fiabilite} descr={texts.fiabilite_descr} />
+      <Dropdown title={texts.respect} descr={texts.respect_descr} />
+      <Dropdown title={texts.service} descr={texts.security_descr} />
+      <Dropdown title={texts.security} descr={texts.security_descr} />
     </section>
   )
 }

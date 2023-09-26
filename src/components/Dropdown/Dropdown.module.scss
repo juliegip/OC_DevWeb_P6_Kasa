@@ -1,0 +1,47 @@
+@import '../../styles/_variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: $primary-color;
+    padding: 10px 12px 10px 10px;
+    border-radius: 5px;
+
+    .title {
+      color: $secondary-color;
+    }
+    .btn {
+      color: white;
+      border: none;
+      background-color: $primary-color;
+    }
+    .hidden {
+      display: none;
+    }
+  }
+
+  .parent {
+    height: 0;
+    overflow: hidden;
+    transition: height ease 0.9s;
+  }
+  .contenttext {
+    background-color: $secondary-color;
+    border-radius: 0 0 5px 5px;
+    padding: 10px 10px;
+    color: $primary-color;
+  }
+
+  .list {
+    background-color: $secondary-color;
+    margin: 0;
+    padding: 10px 10px;
+    list-style: none;
+  }
+}

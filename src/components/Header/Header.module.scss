@@ -1,31 +1,36 @@
 @import '../../styles/_variables.scss';
 
-header {
-    margin: 20px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1440px;
+.header {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 768px;
+  width: 100%;
 }
 
 img {
-    width: 145px;
+  width: 145px;
 }
-
 
 .links a {
-    text-decoration: none;
-    font-weight: 500;
-    color: $primary-color;
-    margin: 0 8px;
-    text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 500;
+  color: $primary-color;
+  margin: 0 8px;
+  text-transform: capitalize;
 
-    &[class="active"] {
-        text-decoration-line: underline;
-        text-decoration-color: $primary-color;
-}
+  &[class='active'] {
+    text-decoration-line: underline;
+    text-decoration-color: $primary-color;
+  }
 
-@media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     text-transform: uppercase;
-}
+    max-width: 1280px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 1440px;
+  }
 }
