@@ -7,7 +7,7 @@ import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 function Dropdown({ title, descr }) {
   const [isOpen, setIsOpen] = useState(false)
   const contentRef = useRef()
-  if (contentRef.current) console.log(contentRef.current.scrollHeight)
+  // if (contentRef.current) console.log(contentRef.current.scrollHeight)
   const toggle = () => {
     setIsOpen(!isOpen)
   }

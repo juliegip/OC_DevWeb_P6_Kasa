@@ -1,36 +1,41 @@
 @import '../../styles/_variables.scss';
 
-.header {
-  margin: 20px 0;
+.container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 40px);
   max-width: 768px;
-  width: 100%;
-}
-
-img {
-  width: 145px;
-}
-
-.links a {
-  text-decoration: none;
-  font-weight: 500;
-  color: $primary-color;
-  margin: 0 8px;
-  text-transform: capitalize;
-
-  &[class='active'] {
-    text-decoration-line: underline;
-    text-decoration-color: $primary-color;
-  }
+  margin: 20px 0;
 
   @media screen and (min-width: 768px) {
-    text-transform: uppercase;
     max-width: 1280px;
   }
 
   @media screen and (min-width: 1280px) {
     max-width: 1440px;
+  }
+
+  img {
+    width: 145px;
+  }
+
+  .menunav a {
+    text-decoration: none;
+    font-weight: 500;
+    color: $primary-color;
+    margin: 0 8px;
+    text-transform: uppercase;
+
+    &[class='active'] {
+      text-decoration-line: underline;
+      text-decoration-color: $primary-color;
+    }
+
+    @media screen and (min-width: 768px) {
+      text-transform: capitalize;
+      width: 1280px;
+      padding: 0;
+    }
   }
 }

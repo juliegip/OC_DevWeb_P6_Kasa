@@ -1,63 +1,61 @@
 @import '../../styles/_variables.scss';
-@import '../../styles/mixin.scss';
-    
+
 .link {
-    text-decoration: none;
-    color: white;
-    display: inline-block;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
 }
 
-.cardWrapper {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition : box-shadow 0.2s ease-in-out;
- 
-    
-    &::after{
-        content: '';
-        z-index: 10;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.5) 100%);
-    }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out;
 
-    .cardImg {
-        width: 100%;
+  &::after {
+    content: '';
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 10px 10px 0 0 ;
 
-    }
-    
-    .cardCaption {
-        position:absolute;
-        z-index: 20;
-        bottom: 5px;
-        left: 10px;
-        text-align: left;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  }
 
-    }
+  .picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px 10px 0 0;
+  }
 
-    &:hover {
-        box-shadow: 0 2px 8px rgb(0, 0, 0);
-        transform: scale(1.05);
-    }
+  .caption {
+    position: absolute;
+    z-index: 20;
+    bottom: 5px;
+    left: 10px;
+    text-align: left;
+  }
 
-    @media screen and (min-width: 768px){
-        min-height: auto;
-        max-height: 340px;
-        aspect-ratio: 1;
+  &:hover {
+    box-shadow: 0 2px 8px rgb(0, 0, 0);
+    transform: scale(1.05);
+  }
 
-    }
-
+  @media screen and (min-width: 768px) {
+    min-height: auto;
+    max-height: 340px;
+    aspect-ratio: 1;
+  }
 }
-

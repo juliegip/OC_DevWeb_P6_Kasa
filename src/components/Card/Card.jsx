@@ -4,13 +4,13 @@ import styles from './Card.module.scss'
 function Card({ data }) {
   return (
     <NavLink className={styles.link} to={`/accomodation/${data.id}`}>
-      <div className={styles.cardWrapper}>
+      <div className={styles.wrapper}>
         <img
-          className={styles.cardImg}
+          className={styles.picture}
           src={data.cover}
           alt={data.tags.toString()}
         />
-        <p className={styles.cardCaption}>{data.title}</p>
+        <p className={styles.caption}>{data.title}</p>
       </div>
     </NavLink>
   )

@@ -1,14 +1,15 @@
 @import '../../styles/_variables.scss';
-@import '../../styles/_mixin.scss';
 
 .footer {
   background-color: black;
   color: white;
   height: 210px;
   margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  @include flex-column;
 
   .text {
     font-size: 0.7em;
