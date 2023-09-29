@@ -1,20 +1,21 @@
 @import '../../styles/_variables.scss';
 
-.mainGallery {
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 768px;
-  gap: 25px 25px;
+  gap: 22px 25px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 767px) {
     flex-direction: row;
     flex-wrap: wrap;
     border-radius: 25px;
     background-color: #f6f6f6;
     max-width: 1440px;
-    padding: 20px 25px;
+    padding: 60px 0px;
+    gap: 60px;
   }
 }

@@ -3,7 +3,7 @@ import Card from '../Card/Card'
 
 function Gallery({ data }) {
   return (
-    <section className={styles.mainGallery}>
+    <section className={styles.container}>
       {data.map((card) => (
         <Card data={card} key={card.id} />
       ))}

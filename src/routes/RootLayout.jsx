@@ -4,7 +4,7 @@ import Header from '../components/Header/Header'
 
 const RootLayout = () => {
   return (
-    <div className="root-layout">
+    <>
       <Header />
 
       <main>
@@ -12,7 +12,7 @@ const RootLayout = () => {
       </main>
 
       <Footer />
-    </div>
+    </>
   )
 }
 

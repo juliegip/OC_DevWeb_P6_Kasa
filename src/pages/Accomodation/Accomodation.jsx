@@ -1,4 +1,5 @@
-import { useParams } from 'react-router-dom'
+import { redirect, useParams } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import styles from './Accomodation.module.scss'
 import Slider from '../../components/Slider/Slider'
 import Dropdown from '../../components/Dropdown/Dropdown'
@@ -8,42 +9,65 @@ import Host from '../../components/Host/Host'
 import properties from '../../data/listofaccomodations'
 import texts from '../../data/app_texts'
 
-function Accomodation(props) {
+function Accomodation() {
+  const [accomodation, setAccomodation] = useState('')
+  const [isLoading, setIsLoading] = useState(true)
+  const [isError, setIsError] = useState(false)
+
   let { id } = useParams()
 
-  const listofproperties = properties.find((product) => product.id === id)
-  if (!listofproperties) return ''
+  useEffect(() => {
+    const selected = properties.filter((property) => property.id === id)
+    if (selected.length > 0) {
+      setAccomodation(selected[0])
+      setIsLoading(false)
+    } else {
+      setIsError(true)
+      setIsLoading(false)
+    }
+  }, [id])
+
+  if (isLoading) {
+    return <p>chargement en cours</p>
+  }
+
+  if (isError) {
+    return redirect('/404')
+  }
 
   return (
-    <div className={styles.container}>
-      <Slider pictures={listofproperties.pictures} />
-      <div className={styles.wrapperDetails}>
-        <div className={styles.wrapperTitlesTags}>
-          <p className={styles.title}>{listofproperties.title}</p>
-          <p className={styles.subtitle}>{listofproperties.location}</p>
-          <Tag tags={listofproperties.tags}></Tag>
-        </div>
-        <div></div>
-        <div className={styles.wrapperHostRates}>
-          <RateStars rating={listofproperties.rating} />
-          <Host
-            name={listofproperties.host.name}
-            profilepic={listofproperties.host.picture}
-          />
-        </div>
-      </div>
-      <div className={styles.collapses}>
-        <Dropdown
-          title={texts.description}
-          descr={listofproperties.description}
-        />
+    <>
+      {accomodation && (
+        <div className={styles.container}>
+          <Slider pictures={accomodation.pictures} />
+          <div className={styles.wrapperDetails}>
+            <div className={styles.wrapperTitlesTags}>
+              <p className={styles.title}>{accomodation.title}</p>
+              <p className={styles.subtitle}>{accomodation.location}</p>
+              <Tag tags={accomodation.tags}></Tag>
+            </div>
+            <div className={styles.wrapperHostRates}>
+              <RateStars rating={accomodation.rating} />
+              <Host
+                name={accomodation.host.name}
+                profilepic={accomodation.host.picture}
+              />
+            </div>
+          </div>
+          <div className={styles.collapses}>
+            <Dropdown
+              title={texts.description}
+              descr={accomodation.description}
+            />
 
-        <Dropdown
-          title={texts.equipements}
-          descr={listofproperties.equipments}
-        />
-      </div>
-    </div>
+            <Dropdown
+              title={texts.equipements}
+              descr={accomodation.equipments}
+            />
+          </div>
+        </div>
+      )}
+    </>
   )
 }
 

@@ -3,7 +3,7 @@ import styles from './Banner.module.scss'
 function Banner({ title, imgURL }) {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>{title}</h1>
+      <p className={styles.title}>{title}</p>
       <img src={imgURL} alt="Kasa banner" className={styles.picture} />
     </div>
   )
