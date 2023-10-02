@@ -4,16 +4,16 @@ import styles from './Dropdown.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
-function Dropdown({ title, descr }) {
+function Dropdown({ title, descr, style }) {
   const [isOpen, setIsOpen] = useState(false)
   const contentRef = useRef()
-  // if (contentRef.current) console.log(contentRef.current.scrollHeight)
+
   const toggle = () => {
     setIsOpen(!isOpen)
   }
 
   return (
-    <article className={styles.container}>
+    <article className={`${styles.container} ${style}`}>
       <div className={styles.topbar}>
         <div className={styles.title}>{title}</div>
         <button className={styles.btn} onClick={toggle}>

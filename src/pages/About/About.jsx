@@ -1,18 +1,34 @@
 import Banner from '../../components/Banner/Banner'
 import Dropdown from '../../components/Dropdown/Dropdown'
 
-import styles from './About.module.css'
+import styles from './About.module.scss'
 import texts from '../../data/app_texts'
 import bg from '../../assets/images/about_banner.png'
 
-function About() {
+function About(collapse) {
   return (
-    <section className={styles.aboutpage}>
+    <section className={styles.container}>
       <Banner imgURL={bg}></Banner>
-      <Dropdown title={texts.fiabilite} descr={texts.fiabilite_descr} />
-      <Dropdown title={texts.respect} descr={texts.respect_descr} />
-      <Dropdown title={texts.service} descr={texts.security_descr} />
-      <Dropdown title={texts.security} descr={texts.security_descr} />
+      <Dropdown
+        title={texts.fiabilite}
+        descr={texts.fiabilite_descr}
+        style={styles.collapse}
+      />
+      <Dropdown
+        title={texts.respect}
+        descr={texts.respect_descr}
+        style={styles.collapse}
+      />
+      <Dropdown
+        title={texts.service}
+        descr={texts.security_descr}
+        style={styles.collapse}
+      />
+      <Dropdown
+        title={texts.security}
+        descr={texts.security_descr}
+        style={styles.collapse}
+      />
     </section>
   )
 }

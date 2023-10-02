@@ -3,7 +3,7 @@ import texts from '../../data/app_texts'
 import data from '../../data/listofaccomodations'
 import bg from '../../assets/images/home_banner.png'
 import Gallery from '../../components/Gallery/Gallery'
-import styles from './Home.module.css'
+import styles from './Home.module.scss'
 
 function Home() {
   return (

@@ -1,6 +1,7 @@
 $primary-color: #ff6060;
-$secondary-color: #F6F6F6;
-$home-bg-image: url('../assets/images/home_banner.png');
-$about-bg-image: url('../assets/images/about_banner.png');
+$secondary-color: #f6f6f6;
 
- 
+@mixin side-margins($size) {
+  width: calc(100% - $size);
+  margin: 0 $size;
+}

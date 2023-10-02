@@ -5,12 +5,28 @@
 }
 body {
   font-family: 'Montserrat', sans-serif;
-  margin: 0 auto;
-  max-width: 1440px;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 main {
-  margin: 0 20px;
+  max-width: 768px;
+  @include side-margins(20px);
+
+  @media screen and (min-width: 768px) {
+    max-width: 1240px;
+    @include side-margins(100px);
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 1440px;
+  }
 }
 
 a {
@@ -20,10 +36,4 @@ a {
 p {
   padding: 0;
   margin: 0;
-}
-
-.root {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }

@@ -6,13 +6,18 @@ import Dropdown from '../../components/Dropdown/Dropdown'
 import Tag from '../../components/Tag/Tag'
 import RateStars from '../../components/RateStars/RateStars'
 import Host from '../../components/Host/Host'
-import properties from '../../data/listofaccomodations'
 import texts from '../../data/app_texts'
+import properties from '../../data/listofaccomodations'
+import useFetch from '../../hooks/useFetch'
 
 function Accomodation() {
   const [accomodation, setAccomodation] = useState('')
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
+
+  // const { data: properties, error: propertiesError } = useFetch(
+  //   '../../hooks/listing.json'
+  // )
 
   let { id } = useParams()
 

@@ -1,17 +1,12 @@
 @import '../../styles/_variables.scss';
 
-.link {
-  text-decoration: none;
-  color: white;
-  display: inline-block;
-}
-
 .container {
   display: flex;
   flex-direction: column;
   justify-items: center;
+  flex-wrap: wrap;
+  width: 100%;
   border-radius: 10px;
-  // background-color: $primary-color;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -21,11 +16,8 @@
     content: '';
     z-index: 10;
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-
     background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.5) 0%,
@@ -33,32 +25,43 @@
     );
   }
 
-  .picture {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 10px 10px 0 0;
-  }
-
-  .caption {
-    position: absolute;
-    z-index: 20;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    text-align: left;
-    font-size: 18px;
-  }
-
   &:hover {
     box-shadow: 0 2px 8px rgb(0, 0, 0);
-    transform: scale(1.05);
+    transform: scale(0.95);
   }
 
   @media screen and (min-width: 768px) {
+    @include side-margins(60px);
+  }
+
+  @media screen and (min-width: 1280px) {
     min-height: auto;
     max-height: 340px;
+    width: 340px;
     aspect-ratio: 1;
+  }
+
+  .link {
+    text-decoration: none;
+    color: white;
+    height: 100%;
+
+    .picture {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .caption {
+      position: absolute;
+      z-index: 20;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      text-align: left;
+      font-size: 18px;
+    }
   }
 }

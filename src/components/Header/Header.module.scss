@@ -4,10 +4,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px auto;
+  padding: 20px 0;
+  max-width: 768px;
+  @include side-margins(20px);
 
   @media screen and (min-width: 768px) {
     max-width: 1240px;
+    padding: 48px 0;
+    @include side-margins(100px);
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 1440px;
   }
 
   .picture {

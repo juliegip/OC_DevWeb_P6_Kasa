@@ -6,16 +6,17 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 768px;
   gap: 22px 25px;
 
-  @media screen and (min-width: 767px) {
-    flex-direction: row;
-    flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
     border-radius: 25px;
     background-color: #f6f6f6;
-    max-width: 1440px;
+    max-width: 1240px;
     padding: 60px 0px;
-    gap: 60px;
+  }
+  @media screen and (min-width: 1280px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1440px;
   }
 }
