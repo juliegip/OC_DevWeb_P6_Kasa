@@ -8,16 +8,12 @@ import RateStars from '../../components/RateStars/RateStars'
 import Host from '../../components/Host/Host'
 import texts from '../../data/app_texts'
 import properties from '../../data/listofaccomodations'
-import useFetch from '../../hooks/useFetch'
+import Loading from '../../components/Loading/Loading'
 
 function Accomodation() {
   const [accomodation, setAccomodation] = useState('')
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
-
-  // const { data: properties, error: propertiesError } = useFetch(
-  //   '../../hooks/listing.json'
-  // )
 
   let { id } = useParams()
 
@@ -33,7 +29,7 @@ function Accomodation() {
   }, [id])
 
   if (isLoading) {
-    return <p>chargement en cours</p>
+    return <Loading />
   }
 
   if (isError) {

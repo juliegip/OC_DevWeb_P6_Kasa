@@ -1,62 +1,29 @@
-// import { useState, useEffect } from 'react'
-
-// function useFetch({ jsondata }) {
-//   const [data, setData] = useState([])
-
-//   const getData = () => {
-//     ;(({ jsondata }),
-//     {
-//       headers: {
-//         'Content-Type': 'application/json',
-//         Accept: 'application/json',
-//       },
-//     })
-//       .then(function (response) {
-//         console.log(response)
-//         return response.json()
-//       })
-//       .then(function (myJson) {
-//         console.log(myJson)
-//         setData(myJson)
-//       })
-//   }
-
-//   useEffect(() => {
-//     getData()
-//   }, [])
-
-//   return { data }
-// }
-
-// export default useFetch
-
 import { useState, useEffect } from 'react'
 
-function useFetch(jsonDataUrl) {
+function useFetch(url) {
   const [data, setData] = useState(null)
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState(null)
+  const [isFetchLoading, setFetchLoading] = useState(true)
+  const [fetchError, setFetchError] = useState(null)
 
   useEffect(() => {
-    const fetchData = async () => {
+    if (!url) return
+    console.log('no data loaded')
+    setFetchLoading(true)
+    async function fetchData() {
       try {
-        const response = await fetch(jsonDataUrl)
-        if (!response.ok) {
-          throw new Error('Network response was not ok')
-        }
-        const jsonData = await response.json()
-        setData(jsonData)
-        setIsLoading(false)
+        const data = await import(url)
+        setData(data)
       } catch (error) {
-        setError(error)
-        setIsLoading(false)
+        setFetchError(true)
+      } finally {
+        setFetchLoading(false)
       }
     }
 
     fetchData()
-  }, [jsonDataUrl])
+  }, [url])
 
-  return { data, error }
+  return { data, isFetchLoading, fetchError }
 }
 
 export default useFetch
