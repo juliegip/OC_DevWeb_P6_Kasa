@@ -27,3 +27,6 @@ yarn-error.log*
 
 # fichier de notes
 ZNotes.md
+
+# vscode config
+.vscode

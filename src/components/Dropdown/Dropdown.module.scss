@@ -1,8 +1,7 @@
 @import '../../styles/_variables.scss';
 
 .container {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   width: 100%;
 
   @media screen and (min-width: 768px) {
@@ -36,7 +35,7 @@
   .parent {
     height: 0;
     overflow: hidden;
-    transition: height ease 0.9s;
+    transition: height ease 0.5s;
   }
   .contenttext {
     background-color: $secondary-color;

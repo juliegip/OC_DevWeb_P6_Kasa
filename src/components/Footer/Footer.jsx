@@ -4,7 +4,7 @@ import logo from '../../assets/images/LOGO-footer.png'
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <img src={logo} alt="" />
+      <img src={logo} alt="Kasa" />
       <p className={styles.text}>&copy; 2020 Kasa. All rights reserved </p>
     </footer>
   )

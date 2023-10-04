@@ -1,39 +1,41 @@
 @import './_variables.scss';
 
-* {
-  box-sizing: border-box;
+*,
+::after,
+::before {
+    box-sizing: border-box;
 }
 body {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 #root {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main {
-  max-width: 768px;
-  @include side-margins(30px);
+    max-width: 768px;
+    @include side-margins(30px);
 
-  @media screen and (min-width: 768px) {
-    max-width: 1240px;
-    @include side-margins(100px);
-  }
+    @media screen and (min-width: 768px) {
+        max-width: 1240px;
+        @include side-margins(100px);
+    }
 
-  @media screen and (min-width: 1280px) {
-    max-width: 1440px;
-  }
+    @media screen and (min-width: 1280px) {
+        max-width: 1440px;
+    }
 }
 
 a {
-  margin: 0;
+    margin: 0;
 }
 
 p {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }

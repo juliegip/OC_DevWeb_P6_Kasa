@@ -1,5 +1,4 @@
-import React from 'react'
-import { useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import styles from './Dropdown.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
@@ -11,6 +10,8 @@ function Dropdown({ title, descr, style }) {
   const toggle = () => {
     setIsOpen(!isOpen)
   }
+
+  const contentHeight = isOpen ? `${contentRef.current.scrollHeight}px` : '0px'
 
   return (
     <article className={`${styles.container} ${style}`}>
@@ -33,11 +34,7 @@ function Dropdown({ title, descr, style }) {
       <div
         className={styles.parent}
         ref={contentRef}
-        style={
-          isOpen
-            ? { height: contentRef.current.scrollHeight + 'px' }
-            : { height: '0px' }
-        }
+        style={{ height: contentHeight }}
       >
         {Array.isArray(descr) ? (
           <ul className={styles.list}>

@@ -5,3 +5,8 @@ $secondary-color: #f6f6f6;
   width: calc(100% - $size);
   margin: 0 $size;
 }
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
