@@ -1,4 +1,4 @@
-import { redirect, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import styles from './Accomodation.module.scss'
 import Slider from '../../components/Slider/Slider'
