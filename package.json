@@ -1,8 +1,8 @@
 {
+    "homepage": "https://juliegip.github.io/OC_DevWeb_P6_Kasa",
     "name": "oc_p6_kasa",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://juliegip.github.io",
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.4.2",
         "@fortawesome/free-brands-svg-icons": "^6.4.2",
@@ -45,8 +45,5 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
-    },
-    "devDependencies": {
-        "gh-pages": "^6.1.0"
     }
 }
