@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+}
+.container .star {
+  width: 15px;
+  height: 15px;
+}
+@media screen and (min-width: 768px) {
+  .container .star {
+    width: 24px;
+    height: 24px;
+  }
+}
+.container .full {
+  color: #ff6060;
+}
+.container .grey {
+  color: gainsboro;
+}/*# sourceMappingURL=RateStars.module.css.map */

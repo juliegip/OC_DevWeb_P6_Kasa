@@ -1,0 +1,80 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 355px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    height: 415px;
+    max-height: 415px;
+  }
+}
+.container .picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  position: absolute;
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+.container .active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+  border-radius: 10px;
+}
+.container .slideImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+@media screen and (min-width: 768px) {
+  .container .slideImg {
+    height: 100%;
+  }
+}
+.container .arrows {
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 24px;
+}
+.container .arrows .arrow {
+  height: 1.5em;
+  width: 1.5em;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+@media screen and (min-width: 768px) {
+  .container .arrows .arrow {
+    height: 4.5em;
+    width: 2.5em;
+  }
+}
+.container .hidden {
+  display: none;
+}
+.container .numbering {
+  display: none;
+}
+@media screen and (min-width: 767px) {
+  .container .numbering {
+    position: absolute;
+    bottom: 24px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+}/*# sourceMappingURL=Slider.module.css.map */

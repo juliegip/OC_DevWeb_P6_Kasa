@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  gap: 22px 25px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    border-radius: 25px;
+    background-color: #f6f6f6;
+    max-width: 1240px;
+    padding: 60px 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    gap: 55px 60px;
+  }
+}/*# sourceMappingURL=Gallery.module.css.map */
