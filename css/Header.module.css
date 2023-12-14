@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  max-width: 768px;
+  width: calc(100% - 20px);
+  margin: 0 20px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 1240px;
+    padding: 48px 0;
+    width: calc(100% - 100px);
+    margin: 0 100px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+.container .picture {
+  margin-left: 20px;
+  width: 145px;
+}
+@media screen and (min-width: 768px) {
+  .container .picture {
+    width: 210px;
+  }
+}
+.container .menunav {
+  display: flex;
+  gap: 10px;
+  margin-right: 25px;
+}
+@media screen and (min-width: 768px) {
+  .container .menunav {
+    gap: 55px;
+  }
+}
+.container .menunav a {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  color: #ff6060;
+  text-transform: uppercase;
+}
+.container .menunav a[class=active] {
+  text-decoration-line: underline;
+  text-decoration-color: #ff6060;
+}
+@media screen and (min-width: 768px) {
+  .container .menunav a {
+    text-transform: capitalize;
+    font-size: 24px;
+    padding: 0;
+    gap: 55px;
+  }
+}/*# sourceMappingURL=Header.module.css.map */
